@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+  
+  <link rel="stylesheet" href="/blog/lib/animate-css/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"rcore-os.github.io","root":"/blog/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}}};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="rcore-os Blog">
+<meta property="og:url" content="http://rcore-os.github.io/blog/page/14/index.html">
+<meta property="og:site_name" content="rcore-os Blog">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="rcore-os Group">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://rcore-os.github.io/blog/page/14/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>rcore-os Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">rcore-os Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">rcore-os Group</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">696</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">50</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/tags/">
+          
+        <span class="site-state-item-count">606</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content index posts-expand">
+          
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/12/06/2024%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93-catme0w/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/12/06/2024%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93-catme0w/" class="post-title-link" itemprop="url">2024秋冬季开源操作系统训练营第三阶段总结-catme0w</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-12-06 23:25:00" itemprop="dateCreated datePublished" datetime="2024-12-06T23:25:00+00:00">2024-12-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-05-24 07:18:17" itemprop="dateModified" datetime="2025-05-24T07:18:17+00:00">2025-05-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>你们好，我是catme0w，来分享一下我在内存分配器挑战中的经历。</p>
+<p>也看看我在二阶段的文章吧：<a href="https://rcore-os.cn/blog/2024/11/10/2024%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%80%E3%80%81%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93-catme0w/" target="_blank" rel="noopener">https://rcore-os.cn/blog/2024/11/10/2024%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%80%E3%80%81%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93-catme0w/</a></p>
+<h1 id="Round-1：更好的TLSF分配器"><a href="#Round-1：更好的TLSF分配器" class="headerlink" title="Round 1：更好的TLSF分配器"></a>Round 1：更好的TLSF分配器</h1><p>一开始拿到题目的时候，是想尝试一下改善“正常的分配器”的，也就是实现通用分配器，因为那时想着，毕竟在内核空间之中搞小动作太过容易，以非正常方式刷分数显得太cheaty了一点也不好玩。</p>
+<p>粗略了解过后，认识到原来TLSF实现所使用的rlsf库已经是分配器算法的较优实现了：<a href="https://github.com/yvt/rlsf#measured-performance" target="_blank" rel="noopener">https://github.com/yvt/rlsf#measured-performance</a> 。尝试调整了一下rlsf的参数（FLLEN和SLLEN），发现并没有什么变化，无法突破170。</p>
+<p>认识到试图优化TLSF似乎是没有前途的；改善TLSF的路线，宣告失败。</p>
+<h1 id="Round-2：面向测例分配器"><a href="#Round-2：面向测例分配器" class="headerlink" title="Round 2：面向测例分配器"></a>Round 2：面向测例分配器</h1><p>那么，我们不得不从头开始写我们自己的东西了。</p>
+<p>要了解分数由什么决定，也就是什么决定了indicator数量的上限，进一步地，了解每一步中内存分配行为和内存碎片的变化。</p>
+<p>不难看出，测例会释放掉偶数项的块，而保留奇数项。</p>
+<p>由此，我们可以针对性地“攻击”这一点——研究测例的分配模式，追踪每一次分配是否是“不会被释放”的那一批，将其连续排列在一个特殊的区域中，使得内存碎片完全不会出现，利用率达到惊人的100%。</p>
+<p>可当我准备动手时，意识到这个东西在现实世界里没有意义，它只能针对这个测例起效。至少在我看来，这已经和非正常方式没有太大差异了。</p>
+<p>那么，要不……一不做二不休，干脆直接把非正常方式做到极致？</p>
+<h1 id="Round-3：假的分配器"><a href="#Round-3：假的分配器" class="headerlink" title="Round 3：假的分配器"></a>Round 3：假的分配器</h1><p>从测例的行为可以了解到，它只会验证块的最后一个字节是否正确，那么思路就很简单了，追踪每次分配行为，如果是外层的Vec，就给它用真的分配器；如果是内层Vec，就只分配两个字节，然后返回伪造的内存地址！</p>
+<p>可是，说的倒轻巧，思路是简单不假，可是究竟有什么方法精确地识别一个堆分配操作来自哪里呢？答案是没门！更不要提伪造内存地址会有多难做。</p>
+<p>我确实尝试了一下，但是……很快放弃了。</p>
+<p>值得一提的是，分配器的部分不直接在内核中，没有println可用，因而调试极其困难。</p>
+<p>必须再换一个思路才行。</p>
+<h1 id="Round-4：他不体面你就帮他体面分配器"><a href="#Round-4：他不体面你就帮他体面分配器" class="headerlink" title="Round 4：他不体面你就帮他体面分配器"></a>Round 4：他不体面你就帮他体面分配器</h1><p>注意到：每次分配的内存大小由base+delta构成，base指数增长，从32开始，每次为之前的两倍，直到达到512 KB；delta为indicator数量。</p>
+<p>释放的规律上文已提过，偶数项释放，奇数项保留。</p>
+<p>那么，新的思路由此诞生：追踪indicator的数量，确定当前测例位于哪一“回合”，进而精确计算出哪些分配会被测例保留，记下它们的内存地址……</p>
+<p>然后，从分配器的代码内，释放掉它们！</p>
+<p>他不体面，你就帮他体面！</p>
+<h3 id><a href="#" class="headerlink" title></a></h3><p>我最开始思路还要更简单些，只是记录下所有分配的内存地址，当遇到大于512 KB的释放时，就释放掉之前记录的所有地址。</p>
+<p>但这样会有一个显而易见的问题：double free——测例本身还会释放一半呢。</p>
+<p>由于测例很简单，我一开始不认为这是个问题，但在我无数次撞在LoadFault上之后，我投降了……</p>
+<h3 id="-1"><a href="#-1" class="headerlink" title></a></h3><p>以下是我最终的详细思路：</p>
+<p>具体不会被释放的块，长度为64+delta、256+delta、1024+delta……。</p>
+<p>将其base值，也就是64、256、1024……维护在分配器内的一个Vec中。</p>
+<p>当分配器命中这些值时，把它们的内存地址和大小保存在另一个Vec中。</p>
+<p>当分配器命中下一“回合”的32+delta，也就是第一次分配时，标志前一“回合”结束，此时，将记录到的那些不会被测例释放的内存块释放掉。</p>
+<p>由此，我们便消除了测例的“内存泄漏”，内存将永远无法被耗尽。</p>
+<h3 id="-2"><a href="#-2" class="headerlink" title></a></h3><p>但没那么简单，这个“正确的思路”第一版实现仍然会停止在130，并且不是no memory，而是触发了LoadFault，内存越界了。</p>
+<p>经观察，我所记录的那些“我要帮它体面”的内存块中，恰好有某项命中了外层Vec的扩张大小……</p>
+<p>由于临近截止，我没有时间仔细去寻找它们到底命中哪个长度了，只能暂时绕过它。</p>
+<p>在indicator足够大之前，每回合均不释放开头的两项。</p>
+<h3 id="-3"><a href="#-3" class="headerlink" title></a></h3><p>一阵操作之后，我终于第一次看到了indicator数量超越170。</p>
+<p>或者说，我终于得到了梦寐以求（？）的无尽indicator。</p>
+<p>在何时停止好呢？来做一个114514吧，多有纪念意义啊。</p>
+<p>只是，它在65536就停了下来，显示no memory。</p>
+<p>何故呢？</p>
+<p>原来，测例中负责释放的那部分（free_pass）所使用的delta长度是u8，只有负责分配的部分（alloc_pass）才是usize。65536是u8的上限，不是我的上限。</p>
+<p>我的114514，梦碎了。</p>
+<h3 id="-4"><a href="#-4" class="headerlink" title></a></h3><p>“这不可能！”</p>
+<p>我大叫起来。</p>
+<p>此时临截止不到一个小时了，我分明记得之前看到过有人把indicator刷到了六位数。</p>
+<p>他们怎么绕过u8的上限的？</p>
+<h1 id="Round-？：一种基于kernel-exploit的分配器"><a href="#Round-？：一种基于kernel-exploit的分配器" class="headerlink" title="Round ？：一种基于kernel exploit的分配器"></a>Round ？：一种基于kernel exploit的分配器</h1><p>想要打破u8，那就得让free_pass不执行。</p>
+<p>得发挥更强大的想象力，寻找更下作（？）的手段。</p>
+<p>那么，这其中的花样可就多了……</p>
+<p>此时的操作系统仍是unikernel，没有虚拟内存，不存在用户空间，所有的代码共用同一个（物理）地址空间。</p>
+<p>你可以找到测例里alloc_pass那个循环下标的内存地址，然后直接把它改成114514……</p>
+<p>或者，直接覆盖掉println……</p>
+<p>甚至，还可以想办法在我们能允许修改的这一小块代码中弄出些use-after-free，来点缓冲区溢出，来点ROP……</p>
+<h3 id="-5"><a href="#-5" class="headerlink" title></a></h3><p>但我想，已经刷到六位数的那些人用的并不是这样的方法。他们会怎么做呢？比赛结束之后再去看看吧。</p>
+<h1 id="100-Honest-Review"><a href="#100-Honest-Review" class="headerlink" title="100% Honest Review"></a>100% Honest Review</h1><p>在最开始，我对参与这项挑战的兴趣不大。我不喜欢这种有零和博弈味道的规则——早提交可能失去优化机会，晚提交可能因结果相同而落后。</p>
+<p>ArceOS已经很难了，题目若再有压力，我会直接躺平。我承认我很脆弱。</p>
+<p>话虽这么说，我还是来了。尽管我很晚才开始了解挑战的细节，而到那时，已经有人发掘出了非正常方式。</p>
+<p>那时我的反应与群里一位的想法几乎一致：这不就彻底没意思了吗？</p>
+<p>但当我亲自上手这个题目时，想法还是逐渐发生了变化。<del>哎真香</del></p>
+<p>纵使前期有些不愉快，最终还是收获了不少快乐与知识。</p>
+<h3 id="-6"><a href="#-6" class="headerlink" title></a></h3><p>但倘若你问我，还想不想再玩一次这样的挑战题目的话……</p>
+<p>我的回答是否定的。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/12/06/2023%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-%E6%98%8E%E6%89%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/12/06/2023%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-%E6%98%8E%E6%89%AC/" class="post-title-link" itemprop="url">2024秋冬训练营第3阶段总结-明扬</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-12-06 17:00:00" itemprop="dateCreated datePublished" datetime="2024-12-06T17:00:00+00:00">2024-12-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-05-24 07:18:17" itemprop="dateModified" datetime="2025-05-24T07:18:17+00:00">2025-05-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/2024%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5/" itemprop="url" rel="index"><span itemprop="name">2024秋冬季开源操作系统训练营</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="第三阶段总结"><a href="#第三阶段总结" class="headerlink" title="第三阶段总结"></a>第三阶段总结</h1><p>第三阶段难度与前两阶段相比难度上升不少.<br>课程框架代码质量也是非常高的, 适配了常见CPU指令集, 是可以应用到实际生产系统中的代码框架.<br>尽管完成实验所需要的代码量不高, 但对题目和计算机结构的理解要求提高了非常多. 本阶段课程结束后我学到了 unikernel 模式和 Hypervisor 工作原理, 受益匪浅.<br>还参加了三阶段的 Allocator 排名竞赛, 锻炼了自己的意识和眼界.<br>四阶段已经选择了异步操作系统课题, 希望自己继续努力, 完成所有课程.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/12/06/2024%E7%A7%8B%E5%86%AC%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC3%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93-%E9%98%BF%E6%95%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/12/06/2024%E7%A7%8B%E5%86%AC%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC3%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93-%E9%98%BF%E6%95%8F/" class="post-title-link" itemprop="url">2024秋冬训练营第3阶段总结-阿敏</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-12-06 16:09:32" itemprop="dateCreated datePublished" datetime="2024-12-06T16:09:32+00:00">2024-12-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-05-24 07:18:17" itemprop="dateModified" datetime="2025-05-24T07:18:17+00:00">2025-05-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/2024%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5/" itemprop="url" rel="index"><span itemprop="name">2024秋冬季开源操作系统训练营</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="第一阶段总结"><a href="#第一阶段总结" class="headerlink" title="第一阶段总结"></a>第一阶段总结</h1><p>1年前开始学习rust，初衷是了解一门操作系统级别的开发语言(深入了解，作为工作语言那种)。并为此写了系列的微信公众号文章《拥抱未来语言Rust》并在社区取得了不错的反响，感兴趣的可以微信公众号搜索“三角兽”，欢迎关注。<br>rust作为一门系统级语言，拥有高性能的同时还具有高安全性，基于RAII风格自动资源管理，避免了很多内存安全问题(这也是吸引我学习的主要原因)。本次比赛是我第一次参加的系统级比赛，通过比赛，夯实了对rust语言的理解，包括：所有权，作用域，生命周期，智能指针等。非常有意义，在此感谢主办方！</p>
+<h1 id="第二阶段总结"><a href="#第二阶段总结" class="headerlink" title="第二阶段总结"></a>第二阶段总结</h1><p>一直以来对OS非常感兴趣，本次通过身临其境的“代码调试”，熟悉了整个项目架构，并对OS有了进一步的深刻认识。在调试过程中不仅熟悉了OS，还对Rust语言有了更深入的认识。第二阶段的操作系统实现基于RISC-V指令集，之前没有了解过RISC-V，因此看汇编语言会有些头痛，但结合RISC-V手册加上AI的辅助，理解这些汇编代码完全没有问题。<br>通过第二阶段的学习，破除了一直以来对操作系统底层实现机制的迷雾，那层隔阂在应用开发人员心底的对操作系统的朦胧自此打破，世界上没有彩蛋，只有认识盲区，破除这些盲区，就是扩大自己的认知，增加自己的技术自信。后面打算写系列的博客来总结、分享操作系统，影响更多的人来学习操作系统。</p>
+<h1 id="第三阶段总结"><a href="#第三阶段总结" class="headerlink" title="第三阶段总结"></a>第三阶段总结</h1><p>第三阶段基础知识阶段，让我了解到了几个不同的方向，分别是Unikernel、MicroKernel、Hypervisor、以及Async OS。主键化开发思想非常重要，将系统无关的公共逻辑抽象出来形成crate，达到软件复用的效果。让我第一次认识到原来OS开发也可以像App开发一样，按模块自由组合，基于底层的积木搭建高楼大厦。<br>工作方面的原因，第三节段的作业我没有太深入的去做，所有的课程录屏及PPT都有仔细观看和阅读，后面抽时间好好做一做课后作业，相信会加深对OS的理解。<br>另外结合自身实际，选择项目四作为实习方向。一直对高并发，异步比较感兴趣（其实对虚拟化也挺感兴趣的，但是对陌生的指令集比较恐惧，怕花太多的时间反而没太大的结果）。<br>系统通过第四阶段对异步操作系统的研究及tokio源码的注释，对异步有更深入的了解，虽然我不是从事系统类软件开发，但始终相信，学习操作系统底层，对上层应用开发也大有裨益，最后感谢清华大学的操作系统课程，后面会写系列博客分享，为社区助力！</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/12/06/%E5%BC%80%E6%BA%90%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5-%E8%B4%BA%E7%90%A8%E9%B9%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/12/06/%E5%BC%80%E6%BA%90%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5-%E8%B4%BA%E7%90%A8%E9%B9%8F/" class="post-title-link" itemprop="url">开源系统训练营第三阶段-贺琨鹏</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-12-06 16:06:15" itemprop="dateCreated datePublished" datetime="2024-12-06T16:06:15+00:00">2024-12-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-05-24 07:18:18" itemprop="dateModified" datetime="2025-05-24T07:18:18+00:00">2025-05-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="课后练习1：print-with-color"><a href="#课后练习1：print-with-color" class="headerlink" title="课后练习1：print_with_color"></a>课后练习1：<code>print_with_color</code></h3><p>在<code>axstd</code>中的wirte方法中，利用终端控制序列（ANSI 转义码）进行有颜色的输出</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">write</span></span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, buf: &amp;[<span class="built_in">u8</span>]) -&gt; io::<span class="built_in">Result</span>&lt;<span class="built_in">usize</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> color_prefix = <span class="string">b"\x1b[32m"</span>;</span><br><span class="line">    <span class="keyword">let</span> color_suffix = <span class="string">b"\x1b[0m"</span>;</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> <span class="literal">Err</span>(e) = arceos_api::stdio::ax_console_write_bytes(color_prefix) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">Err</span>(e);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> result = arceos_api::stdio::ax_console_write_bytes(buf);</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> <span class="literal">Err</span>(e) = result &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">Err</span>(e);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> <span class="literal">Err</span>(e) = arceos_api::stdio::ax_console_write_bytes(color_suffix) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">Err</span>(e);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>MMIO：将设备寄存器直接映射到内存空间上，并具有独立的地址<br><code>u_3_0</code>模拟闪存磁盘，启动时自动从文件加载内容到固定的MMIO区域。（对读操作不需要驱动，直接访问）</p>
+<p>paging特征决定了是否启动后期重建完成的空间映射</p>
+<h3 id="课后练习3：实现bump内存分配算法"><a href="#课后练习3：实现bump内存分配算法" class="headerlink" title="课后练习3：实现bump内存分配算法"></a>课后练习3：实现bump内存分配算法</h3><p><strong>引导问题（bootstrap problem）</strong>，也被称为“先有鸡还是先有蛋”的问题。内核在刚启动时，需要分配内存来建立自己的数据结构（例如内存映射、页表等），但此时还不知道系统中有多少物理内存，也没有初始化内存分配器。然而，要调用库函数（如用于解析设备树、初始化驱动等），可能需要动态内存分配。这就导致了一个悖论：<strong>需要分配内存来初始化内存管理，但又需要内存管理来分配内存</strong>。<br><strong>练习：在引导阶段实现bump内存分配</strong><br>分别为<code>BaseAllocator</code>，<code>ByteAllocator</code>，<code>PageAllocator</code>实现特征即可</p>
+<p>实现相关特征即可，注意在页分配的时候进行对齐，字节分配器下的<code>dealloc</code>只需对count进行操作即可</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="class"><span class="keyword">struct</span> <span class="title">EarlyAllocator</span></span> &#123;</span><br><span class="line">    start: <span class="built_in">usize</span>,</span><br><span class="line">    end: <span class="built_in">usize</span>,</span><br><span class="line">    b_pos: <span class="built_in">usize</span>,</span><br><span class="line">    p_pos: <span class="built_in">usize</span>,</span><br><span class="line">    count: <span class="built_in">usize</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> EarlyAllocator &#123;</span><br><span class="line">    <span class="keyword">pub</span> <span class="keyword">const</span> <span class="function"><span class="keyword">fn</span> <span class="title">new</span></span>() -&gt; <span class="keyword">Self</span> &#123;</span><br><span class="line">        <span class="keyword">Self</span> &#123;</span><br><span class="line">            start: <span class="number">0</span>,</span><br><span class="line">            end: <span class="number">0</span>,</span><br><span class="line">            b_pos: <span class="number">0</span>,</span><br><span class="line">            p_pos: <span class="number">0</span>,</span><br><span class="line">            count: <span class="number">0</span>,</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> BaseAllocator <span class="keyword">for</span> EarlyAllocator &#123;</span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">init</span></span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, start: <span class="built_in">usize</span>, size: <span class="built_in">usize</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.start = start;</span><br><span class="line">        <span class="keyword">self</span>.end = start + size;</span><br><span class="line">        <span class="keyword">self</span>.b_pos = start;</span><br><span class="line">        <span class="keyword">self</span>.p_pos = <span class="keyword">self</span>.end;</span><br><span class="line">        <span class="keyword">self</span>.count = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">add_memory</span></span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, start: <span class="built_in">usize</span>, size: <span class="built_in">usize</span>) -&gt; AllocResult &#123;</span><br><span class="line">        <span class="keyword">self</span>.end += size;</span><br><span class="line">        <span class="literal">Ok</span>(())</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> ByteAllocator <span class="keyword">for</span> EarlyAllocator &#123;</span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">alloc</span></span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, layout: Layout) -&gt; AllocResult&lt;NonNull&lt;<span class="built_in">u8</span>&gt;&gt; &#123;</span><br><span class="line">        <span class="keyword">let</span> size = layout.size();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">self</span>.b_pos + size &gt; <span class="keyword">self</span>.p_pos &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">Err</span>(allocator::AllocError::NoMemory);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> ptr = <span class="keyword">self</span>.b_pos;</span><br><span class="line">        <span class="keyword">self</span>.b_pos = <span class="keyword">self</span>.b_pos + size;</span><br><span class="line">        <span class="keyword">self</span>.count += <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">unsafe</span> &#123; <span class="literal">Ok</span>(NonNull::new_unchecked(ptr <span class="keyword">as</span> *<span class="keyword">mut</span> <span class="built_in">u8</span>)) &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">dealloc</span></span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, _pos: NonNull&lt;<span class="built_in">u8</span>&gt;, _layout: Layout) &#123;</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">self</span>.count &gt; <span class="number">0</span> &#123;</span><br><span class="line">            <span class="keyword">self</span>.count -= <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">self</span>.count == <span class="number">0</span> &#123;</span><br><span class="line">            <span class="keyword">self</span>.b_pos = <span class="keyword">self</span>.start;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">total_bytes</span></span>(&amp;<span class="keyword">self</span>) -&gt; <span class="built_in">usize</span> &#123;</span><br><span class="line">        <span class="keyword">self</span>.end - <span class="keyword">self</span>.start</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">used_bytes</span></span>(&amp;<span class="keyword">self</span>) -&gt; <span class="built_in">usize</span> &#123;</span><br><span class="line">        <span class="keyword">self</span>.b_pos - <span class="keyword">self</span>.start</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">available_bytes</span></span>(&amp;<span class="keyword">self</span>) -&gt; <span class="built_in">usize</span> &#123;</span><br><span class="line">        <span class="keyword">self</span>.p_pos - <span class="keyword">self</span>.b_pos</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">impl</span> PageAllocator <span class="keyword">for</span> EarlyAllocator &#123;</span><br><span class="line">    <span class="keyword">const</span> PAGE_SIZE: <span class="built_in">usize</span> = <span class="number">0x1000</span>; </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">alloc_pages</span></span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, num_pages: <span class="built_in">usize</span>, align_pow2: <span class="built_in">usize</span>) -&gt; AllocResult&lt;<span class="built_in">usize</span>&gt; &#123;</span><br><span class="line">        <span class="keyword">let</span> size = num_pages * Self::PAGE_SIZE;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> new_p_pos = (<span class="keyword">self</span>.p_pos - size) &amp; !(align_pow2 - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> new_p_pos &lt; <span class="keyword">self</span>.b_pos &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">Err</span>(allocator::AllocError::NoMemory);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">self</span>.p_pos = new_p_pos;</span><br><span class="line">        <span class="literal">Ok</span>(<span class="keyword">self</span>.p_pos)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">dealloc_pages</span></span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, _pos: <span class="built_in">usize</span>, _num_pages: <span class="built_in">usize</span>) &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">total_pages</span></span>(&amp;<span class="keyword">self</span>) -&gt; <span class="built_in">usize</span> &#123;</span><br><span class="line">        (<span class="keyword">self</span>.end - <span class="keyword">self</span>.start) / Self::PAGE_SIZE</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">used_pages</span></span>(&amp;<span class="keyword">self</span>) -&gt; <span class="built_in">usize</span> &#123;</span><br><span class="line">        (<span class="keyword">self</span>.end - <span class="keyword">self</span>.p_pos) / Self::PAGE_SIZE</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">fn</span> <span class="title">available_pages</span></span>(&amp;<span class="keyword">self</span>) -&gt; <span class="built_in">usize</span> &#123;</span><br><span class="line">        (<span class="keyword">self</span>.p_pos - <span class="keyword">self</span>.b_pos) / Self::PAGE_SIZE</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>增加<code>axsync</code></strong><br>抢占式调度机制<br>触发优先级高的任务及时获得调用机会，避免个别任务长期不合理占据CPU</p>
+<p>支持从磁盘块设备读数据，替换PFlash<br>管理方式：<code>static</code> or <code>dyn</code></p>
+<p>块设备驱动Trait：<code>BlockDriverOps</code></p>
+<h3 id="课后练习4：为shell增加文件操作命令"><a href="#课后练习4：为shell增加文件操作命令" class="headerlink" title="课后练习4：为shell增加文件操作命令"></a>课后练习4：为shell增加文件操作命令</h3><p>底层以fatfs为框架实现好了，我们只需调用api即可</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">do_mv</span></span>(args: &amp;<span class="built_in">str</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> args = args.trim();</span><br><span class="line">    <span class="keyword">if</span> args.is_empty() &#123;</span><br><span class="line">        print_err!(<span class="string">"mv"</span>, <span class="string">"missing operand"</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> paths = args.split_whitespace();</span><br><span class="line">    <span class="keyword">let</span> src = <span class="keyword">match</span> paths.next() &#123;</span><br><span class="line">        <span class="literal">Some</span>(p) =&gt; p,</span><br><span class="line">        <span class="literal">None</span> =&gt; &#123;</span><br><span class="line">            print_err!(<span class="string">"mv"</span>, <span class="string">"missing source file"</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> dest_dir = <span class="keyword">match</span> paths.next() &#123;</span><br><span class="line">        <span class="literal">Some</span>(p) =&gt; p,</span><br><span class="line">        <span class="literal">None</span> =&gt; &#123;</span><br><span class="line">            print_err!(<span class="string">"mv"</span>, <span class="string">"missing destination directory"</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> dest_path = <span class="built_in">format!</span>(<span class="string">"&#123;&#125;/&#123;&#125;"</span>, dest_dir, src);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> <span class="literal">Err</span>(e) = fs::rename(src, &amp;dest_path) &#123;</span><br><span class="line">        print_err!(<span class="string">"mv"</span>, <span class="built_in">format!</span>(<span class="string">"failed to move &#123;&#125; to &#123;&#125;"</span>, src, dest_dir), e);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">do_rename</span></span>(args: &amp;<span class="built_in">str</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> args = args.trim();</span><br><span class="line">    <span class="keyword">if</span> args.is_empty() &#123;</span><br><span class="line">        print_err!(<span class="string">"rename"</span>, <span class="string">"missing operand"</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> paths = args.split_whitespace();</span><br><span class="line">    <span class="keyword">let</span> old_name = <span class="keyword">match</span> paths.next() &#123;</span><br><span class="line">        <span class="literal">Some</span>(p) =&gt; p,</span><br><span class="line">        <span class="literal">None</span> =&gt; &#123;</span><br><span class="line">            print_err!(<span class="string">"rename"</span>, <span class="string">"missing old file name"</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> new_name = <span class="keyword">match</span> paths.next() &#123;</span><br><span class="line">        <span class="literal">Some</span>(p) =&gt; p,</span><br><span class="line">        <span class="literal">None</span> =&gt; &#123;</span><br><span class="line">            print_err!(<span class="string">"rename"</span>, <span class="string">"missing new file name"</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> <span class="literal">Err</span>(e) = fs::rename(old_name, new_name) &#123;</span><br><span class="line">        print_err!(<span class="string">"rename"</span>, <span class="built_in">format!</span>(<span class="string">"failed to rename &#123;&#125; to &#123;&#125;"</span>, old_name, new_name), e);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p><code>ArceOS Unikernel</code>包括两阶段的地址映射<br>Boot阶段默认开启1G空间的恒等映射<br>如果需要支持设备的MMIO区间，通过指定一个<code>feature- &quot;paging&quot;</code>来实现重映射</p>
+<p>可选的重建映射</p>
+<ol>
+<li>为了管理更大范围的地址空间，包括设备的MMIO范围</li>
+<li>分类和权限的细粒度控制</li>
+</ol>
+<h2 id="宏内核"><a href="#宏内核" class="headerlink" title="宏内核"></a>宏内核</h2><ul>
+<li>增加了用户特权级</li>
+<li>创建独立的用户地址空间</li>
+<li>内核运行运行时可以随时加载应用Image投入运行</li>
+<li>应用与内核界限分明</li>
+</ul>
+<p>高端内核空间，低端用户应用空间</p>
+<hr>
+<p><strong>宏内核的地址空间管理</strong></p>
+<p>地址空间区域映射后端</p>
+<ol>
+<li>linear：对应物理地址必须连续</li>
+<li>alloc：按页映射，可能不连续</li>
+</ol>
+<p>多级调用<code>handle_page_fault</code></p>
+<p>populate为true时，申请页帧后直接完成映射；为false时仅建立空映射</p>
+<p><strong>如何让Linux的原始应用直接在我们宏内核上直接运行</strong></p>
+<p>实现兼容页面，包含<code>syscall</code>，<code>procfs &amp; sysfs</code>等伪文件系统，<code>awareness of aspace</code></p>
+<p><strong>ELF格式应用的加载</strong></p>
+<blockquote>
+<p>需要注意文件内偏移和预定的虚拟地址空间内的偏移可能不一致，特别是数据段的部分</p>
+</blockquote>
+<p>存零，清零</p>
+<p><strong>应用的用户栈的初始化</strong><br>支持系统调用的层次结构</p>
+<p>系统调用号与体系结构相关</p>
+<p>对Linux常用文件系统的支持</p>
+<p><strong>课后练习：实现mmap系统调用</strong></p>
+<h2 id="Hypervisor"><a href="#Hypervisor" class="headerlink" title="Hypervisor"></a>Hypervisor</h2><p>建立最简化的<code>Hypervisor
+过程
+新建地址空间，加载内核镜像
+准备上下文
+设置两级页表
+切换V模式
+OS内核只有一条指令：调用</code>sbi-call<code>的关机操作。但由于这种操作超出了V模式的权限，导致</code>VM_EXIT<code>退出虚拟机，切换回Hypervisor
+Hypervisor响应</code>VM_EXIT<code>的函数（</code>vmexit_handler`）检查退出原因和参数，进行处理，由于时请求关机，清理虚拟机后退出</p>
+<p>进入虚拟化模式准备的条件<br>ISA寄存器misa第7位代表Hypervisor扩展的启用/禁止。<br>进入V模式路径的控制：hstatus第7位SPV记录上一次进入HS特权级前的模式，1代表来自虚拟化模式。<br>执行sret时，根据SPV决定是返回用户态，还是返回虚拟化模式。<br>Hypervisor首次启动Guest的内核之前，伪造上下文作准备：<br>设置Guest的sstatus，让其初始特权级为Supervisor；<br>设置Guest的sepc为OS启动入口地址VM_ENTRY，VM_ENTRY值就是内核启动的入口地址，<br>对于Riscv64，其地址是0x8020_0000。</p>
+<p><strong>如何从pflash设备读出数据</strong></p>
+<ol>
+<li>模拟模式：为虚拟机模拟一个<code>pflash</code></li>
+<li>透传模式：直接把qumu的pflash透传给虚拟机</li>
+</ol>
+<p><strong>地址映射的支持</strong><br>两阶段的地址映射<br>GVA -&gt; GPA -&gt; HPA</p>
+<p>虚拟机时钟中断<br>为了支持抢占式调度</p>
+<p>问题：宿主环境失效问题<br>通过中断注入</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/12/05/2024%E7%A7%8B%E5%86%AC%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-XiangyuTu/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/12/05/2024%E7%A7%8B%E5%86%AC%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-XiangyuTu/" class="post-title-link" itemprop="url">2024秋冬开源操作系统训练营第三阶段总结报告</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-12-05 22:00:00" itemprop="dateCreated datePublished" datetime="2024-12-05T22:00:00+00:00">2024-12-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-05-24 07:18:17" itemprop="dateModified" datetime="2025-05-24T07:18:17+00:00">2025-05-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>第三阶段的时候学校事务相对来说比较忙，因此只简单地写了 <code>print_with_color</code>, <code>hashmap</code> 和 <code>mmap</code> 这几个较为简单的练习。</p>
+<p>我当时参加了 <code>lab1</code> 挑战，通过针对测例优化内存分配器减少碎片来取得更高的分数。</p>
+<p>因为 ArceOS 自带的 TLSF 分配器效率已经十分高了，因此一开始一度陷入僵局，后来偶然发现 Slab 分配器中内嵌一个 Buddy 分配器，想着能不能把它换成 TLSF 分配器，于是就开始了一系列的尝试。</p>
+<p>将 Slab 中的 Buddy 分配器替换成 TLSF 分配器后，拿到了 260 分终于突破了 ArceOS TLSF 分配器的 170 分。</p>
+<p>考虑到题目中的分配失败都是因为大量不连续的内存碎片导致的，通过观察测例的内存分配规律，于是我将 Slab 中最小 64 Bytes 的大小提高到了 96 Bytes，这样虽然有可能浪费一些内存（在所需内存小于 96 Bytes 的情况下），但是可以减少内存中不连续的碎片，最终拿到了 330 分，并得到了常规操作榜第 9 名的成绩。</p>
+<p>通过第三阶段的学习，巩固了我对操作系统的了解，并提升了我对内存分配算法的理解；同时也让我了解到 Unikernel 和 Monolithic Kernel 的区别，Hypervisor 的原理，对操作系统的设计有了更深的认识。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/12/05/%E5%B0%9A%E4%B9%A6%E7%9A%84rcore%E6%8B%BE%E9%81%97-%E9%98%B6%E6%AE%B53/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/12/05/%E5%B0%9A%E4%B9%A6%E7%9A%84rcore%E6%8B%BE%E9%81%97-%E9%98%B6%E6%AE%B53/" class="post-title-link" itemprop="url">2024秋冬季开源操作系统训练营第三阶段总结报告-zerich</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-12-05 21:27:01" itemprop="dateCreated datePublished" datetime="2024-12-05T21:27:01+00:00">2024-12-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-05-24 07:18:18" itemprop="dateModified" datetime="2025-05-24T07:18:18+00:00">2025-05-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>第三阶段和第二阶段相比明显更加<strong>基础</strong>，虽然有一些第二阶段涉及过的内容，例如任务切换，地址空间等等，但是第三阶段重点在于ArceOS和组件化操作系统，强调了如何从裸机（或者qemu）上通过各层模块的调用实现一个完整的操作系统。</p>
+<h2 id="Unikernel"><a href="#Unikernel" class="headerlink" title="Unikernel"></a>Unikernel</h2><p>第一周的课程围绕着unikernel展开，讲解了使用各个组件来实现一个unikernel。包括内存分配，地址空间，任务与运行队列，调度，块设备驱动和文件系统。</p>
+<p>以实验1为例，要求修改println的输出颜色。</p>
+<p>不难发现println!基于ulib调用arceos_api,实现输出流调用抽象层axhal中的console::write_bytes进行不同platform的putchar()来操作sbi。所以在ulib处或者axhal处使用ANSI escape codes都可以起到目标的效果，并且在ulib处只作用于println!,而在axhal处作用于启动后的所有输出。</p>
+<p>tour2同理，找到调用的modules/axalloc模块，发现其cargo.toml默认为未实现的lab，进行修改即可。</p>
+<p>就这样，我们通过config，可以在rust便捷构建unikernel组件。接着的课程继续处理调度，总线，文件系统等来构建一个完整的unikernel。</p>
+<h2 id="Monolithic"><a href="#Monolithic" class="headerlink" title="Monolithic"></a>Monolithic</h2><p>接下来的课程带领我们从unikernel跨到宏内核，主要任务在于用户空间和内核空间的切换。</p>
+<p>从Unikernel基础到目标最小化宏内核需要完成的增量工作：</p>
+<ol>
+<li>用户地址空间的创建和区域映射</li>
+<li>在异常中断响应的基础上增加系统调用</li>
+<li>复用Unikernel原来的调度机制，针对宏内核扩展Task属性</li>
+<li>在内核与用户两个特权级之间的切换机制</li>
+</ol>
+<p>我了解了riscv下进入用户态的伪造现场机制，剩下的内容就是处理好用户态的地址空间，实现musl工具链。</p>
+<p>这部分很有意思的内容有一个关于异构内核的讨论，也就是说实现异构内核的Task结构体来记录任务信息，但是在异构核上不同的task需要记录的信息是不一样的。</p>
+<p>如果在task结构体上直接通过编译选项控制的话，不利于扩展性，使用基础属性和额外属性的关联索引则需要查找开销，所以引入类似TLS的指针扩展机制是一个折中的方案。</p>
+<h2 id="Hypervisor"><a href="#Hypervisor" class="headerlink" title="Hypervisor"></a>Hypervisor</h2><p>第三周的内容就是关于RISCV的虚拟化了，虽然在之前了解过虚拟化的大致原理，但是深入了解RISCV硬件支持的hs和vs寄存器组和sv39的页表扩展，仍然感到这样的设计之精妙。</p>
+<p>课程详细讲解了hyperv上抽象的VCPU结构体和如何实现VM_entry,VM_exit，接下来再介绍包括透传，中断等其他事项的处理。</p>
+<h2 id="End"><a href="#End" class="headerlink" title="End"></a>End</h2><p>受限于课业忙碌，笔者并没有对挑战任务做出贡献，也缺少对arceos的深入了解，但是课程提纲挈领的讲解令我收获良多。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/12/05/2024%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-%E5%91%A8%E9%B8%BF%E9%92%A7%20/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/12/05/2024%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-%E5%91%A8%E9%B8%BF%E9%92%A7%20/" class="post-title-link" itemprop="url">2024秋冬季开源操作系统训练营第三阶段总结报告_周鸿钧</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-12-05 15:33:10" itemprop="dateCreated datePublished" datetime="2024-12-05T15:33:10+00:00">2024-12-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-05-24 07:18:17" itemprop="dateModified" datetime="2025-05-24T07:18:17+00:00">2025-05-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/2024%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5/" itemprop="url" rel="index"><span itemprop="name">2024秋冬季开源操作系统训练营</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>就组件化内核ArceOS来说，它是用于构建各种类型的操作系统的组件仓库。自然也能够支持微内核操作系统的构建，但是第三阶段中有unikernel、有monolithic-kernel、有Hyperisor，唯独没有微内核，有点遗憾。</p>
+<p>本篇记录我对基于ArceOS构建微内核操作系统的方法的思考和实践。</p>
+<h1 id="需要的组件"><a href="#需要的组件" class="headerlink" title="需要的组件"></a>需要的组件</h1><h2 id="硬件抽象层"><a href="#硬件抽象层" class="headerlink" title="硬件抽象层"></a>硬件抽象层</h2><p>底层硬件平台从支持aarch64开始。</p>
+<ul>
+<li>arm_pl031</li>
+<li>arm_gicv2 </li>
+</ul>
+<h2 id="内核态"><a href="#内核态" class="headerlink" title="内核态"></a>内核态</h2><p>支持基本的特权操作。</p>
+<ul>
+<li>axstd</li>
+<li>axalloc</li>
+<li>paging</li>
+<li>axtask</li>
+<li>axsync</li>
+</ul>
+<h2 id="用户态"><a href="#用户态" class="headerlink" title="用户态"></a>用户态</h2><p>用户态主要支持块设备、网络和文件系统等。</p>
+<ul>
+<li>syscall</li>
+<li>axmm</li>
+<li>axvcpu</li>
+<li>vfs</li>
+<li>blk_drv</li>
+<li>fat32</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/12/04/2024%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%AF%92%E5%86%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/12/04/2024%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%AF%92%E5%86%B0/" class="post-title-link" itemprop="url">2024秋冬季开源操作系统训练营第三阶段实验报告-寒冰</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-12-04 05:10:00" itemprop="dateCreated datePublished" datetime="2024-12-04T05:10:00+00:00">2024-12-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-05-24 07:18:17" itemprop="dateModified" datetime="2025-05-24T07:18:17+00:00">2025-05-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/2024%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A-%E5%AF%92%E5%86%B0/" itemprop="url" rel="index"><span itemprop="name">2024秋冬季开源操作系统训练营第三阶段实验报告-寒冰</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="内存分配器-字节分配器：Chaos-一点都不-Chaos"><a href="#内存分配器-字节分配器：Chaos-一点都不-Chaos" class="headerlink" title="内存分配器-字节分配器：Chaos 一点都不 Chaos"></a>内存分配器-字节分配器：Chaos 一点都不 Chaos</h1><h2 id="分析内存结构"><a href="#分析内存结构" class="headerlink" title="分析内存结构"></a>分析内存结构</h2><h3 id="堆中的-Vec-lt-Vec-lt-u8-gt-gt-结构数据"><a href="#堆中的-Vec-lt-Vec-lt-u8-gt-gt-结构数据" class="headerlink" title="堆中的 Vec&lt;Vec&lt;u8&gt;&gt; 结构数据"></a>堆中的 <code>Vec&lt;Vec&lt;u8&gt;&gt;</code> 结构数据</h3><p>使用上述任意分配器，并在 alloc 和 dealloc 函数，中分别打印 Layout。在打印结果中可以看到一些比较特殊的内存大小分别为 96、192、384</p>
+<p>这是什么呢？根据 <code>lab1/src/main.rs</code> 中的测例代码分析可得知 <code>let mut items: Vec&lt;Vec&lt;u8&gt;&gt; = Vec::new();</code> 的内层 <code>Vec</code> 将存放在堆内存中。</p>
+<p>而 <a href="https://rcore-os.cn/rCore-Tutorial-Book-v3/chapter4/1rust-dynamic-allocation.html?highlight=vec#rust-heap-data-structures" target="_blank" rel="noopener">Rust 中的堆数据结构</a> 中的一张图片展示了 Vec 的内存结构为指针、长度和容量，每一部分各占 usize，在 64 位系统中，uszie 大小为 8 字节，即一个空数组内存占用为 24 字节，这与 96 字节仍有出入。</p>
+<p>再观察分配情况，在 <code>Indicator: 0</code> 时，96 字节的 alloc 是在第一次 32 字节 alloc 后产生的，猜测是在 <code>items.push</code> 后进行了一次 <a href="https://doc.rust-lang.org/std/vec/struct.Vec.html#capacity-and-reallocation" target="_blank" rel="noopener">扩容</a>，<code>alloc_pass</code> 修改为如下代码进行验证：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">alloc_pass</span></span>(delta: <span class="built_in">usize</span>) -&gt; <span class="built_in">Vec</span>&lt;<span class="built_in">Vec</span>&lt;<span class="built_in">u8</span>&gt;&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> items = <span class="built_in">Vec</span>::new();</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">mut</span> base = <span class="number">32</span>;</span><br><span class="line">    <span class="keyword">loop</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> c = (delta % <span class="number">256</span>) <span class="keyword">as</span> <span class="built_in">u8</span>;</span><br><span class="line">        <span class="keyword">let</span> a = <span class="built_in">vec!</span>[c; base+delta];</span><br><span class="line">        items.push(a);</span><br><span class="line">        <span class="built_in">println!</span>(<span class="string">"Item Capacity: &#123;&#125;"</span>, items.capacity());</span><br><span class="line">        <span class="keyword">if</span> base &gt;= <span class="number">512</span>*<span class="number">1024</span> &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        base *= <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    items</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Running bumb tests...</span><br><span class="line">Indicator: 0</span><br><span class="line">Item Capacity: 4</span><br><span class="line">Item Capacity: 4</span><br><span class="line">Item Capacity: 4</span><br><span class="line">Item Capacity: 4</span><br><span class="line">Item Capacity: 8</span><br><span class="line">Item Capacity: 8</span><br><span class="line">Item Capacity: 8</span><br><span class="line">Item Capacity: 8</span><br><span class="line">Item Capacity: 16</span><br><span class="line">Item Capacity: 16</span><br><span class="line">Item Capacity: 16</span><br><span class="line">Item Capacity: 16</span><br><span class="line">Item Capacity: 16</span><br><span class="line">Item Capacity: 16</span><br><span class="line">Item Capacity: 16</span><br></pre></td></tr></table></figure>
+
+<p>就对上了，<code>24 * 4 = 96</code> <code>24 * 8 = 192</code> <code>24 * 16 = 384</code> </p>
+<p>同时，至少在这里来说，<code>Vec</code> 初始容量为 0，第一次扩容时为 4，扩容机制为每次容量翻倍。</p>
+<h3 id="存放数据的堆空间"><a href="#存放数据的堆空间" class="headerlink" title="存放数据的堆空间"></a>存放数据的堆空间</h3><p>再回到测例代码：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">fn</span> <span class="title">free_pass</span></span>(items: &amp;<span class="keyword">mut</span> <span class="built_in">Vec</span>&lt;<span class="built_in">Vec</span>&lt;<span class="built_in">u8</span>&gt;&gt;, delta: <span class="built_in">u8</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> total = items.len();</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> (<span class="number">0</span>..total).rev() &#123;</span><br><span class="line">        <span class="keyword">if</span> j % <span class="number">2</span> == <span class="number">0</span> &#123;</span><br><span class="line">            <span class="keyword">let</span> ret = items.remove(j);</span><br><span class="line">            <span class="built_in">assert_eq!</span>(delta, ret[<span class="number">0</span>]);</span><br><span class="line">            <span class="built_in">assert_eq!</span>(delta, ret[ret.len()-<span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码在检查是否为偶数项，偶数项数组才会被 <code>free_pass</code> 的 <code>remove()</code> 释放。</p>
+<p>因此针对这段代码，可以在分配器中设置一个奇偶标志位，当标志位为奇数时将数据从内存的起始位置开始分配，偶数时分配在末尾位置且向起始位置增长。扩容时，不考虑内存扩容时传入的内存地址起始位置而只改变结尾位置时也无需多余操作。</p>
+<h2 id="Chaos-真的不-Chaos"><a href="#Chaos-真的不-Chaos" class="headerlink" title="Chaos 真的不 Chaos"></a>Chaos 真的不 Chaos</h2><h3 id="整体结构"><a href="#整体结构" class="headerlink" title="整体结构"></a>整体结构</h3><p>考虑：</p>
+<ol>
+<li>堆中的 <code>Vec&lt;Vec&lt;u8&gt;&gt;</code> 数据结构，大小固定为 <code>96 + 192 + 384 = 672</code> 字节，位于可分配内存的起始位置</li>
+<li>奇数项堆，动态增长，紧跟 672 字节</li>
+<li>偶数项堆，动态增长，位于可分配内存的末尾位置</li>
+</ol>
+<p>使用以下结构体来描述整个可分配内存区域</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="class"><span class="keyword">struct</span> <span class="title">Chaos</span></span> &#123;</span><br><span class="line">    <span class="keyword">pub</span> vec_reserve: (<span class="built_in">usize</span>, <span class="built_in">usize</span>, <span class="built_in">usize</span>),</span><br><span class="line"></span><br><span class="line">    <span class="keyword">pub</span> start: <span class="built_in">usize</span>,</span><br><span class="line">    <span class="keyword">pub</span> end: <span class="built_in">usize</span>,</span><br><span class="line">    <span class="keyword">pub</span> head: <span class="built_in">usize</span>,</span><br><span class="line">    <span class="keyword">pub</span> tail: <span class="built_in">usize</span>,</span><br><span class="line">    <span class="keyword">pub</span> is_even: <span class="built_in">bool</span>,</span><br><span class="line"></span><br><span class="line">    <span class="keyword">pub</span> allocated: <span class="built_in">usize</span>,</span><br><span class="line">    <span class="keyword">pub</span> total: <span class="built_in">usize</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>内存结构如下：</p>
+<p><img src="https://ice.frostsky.com/2024/12/04/31665acefb8e6fbfa3315cc85b607994.png" alt="memory"></p>
+<p><code>vec_reserve: (usize, usize, usize)</code> 用作存储先前描述的三片特殊的堆中 Vec 元数据结构，<code>vec_reserve</code> 为固定长度：<code>96 + 192 + 384</code> 字节。</p>
+<p><code>pub start: usize</code>  和 <code>pub end: usize</code> 分别存储 init 或是 add_to_heap 时给定的可分配内存地址范围。</p>
+<p><code>pub head: usize</code> 和 <code>pub tail: usize</code> 分别存储当前奇数堆的末尾位置和偶数堆的起始位置，通过 <code>head - start + vec_reserve</code> 可以得出奇数堆大小，通过 <code>end - tail</code> 则可以得出偶数堆大小。</p>
+<p><code>pub is_even: bool</code> 用于记录上一次分配是奇数还是偶数，在分配的最后将其翻转。</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>在开始之前，还要确定一个很重要的问题。目前的设计，并没有考虑扩容时分配在本程序堆内存前内存区域的地址，因此使用代码简单判断下：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="function"><span class="keyword">fn</span> <span class="title">add_to_heap</span></span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, start: <span class="built_in">usize</span>, end: <span class="built_in">usize</span>) &#123;</span><br><span class="line">    log::warn!(<span class="string">"head: 0x&#123;:x&#125;, tail: 0x&#123;:x&#125;, start: 0x&#123;:x&#125;, end: 0x&#123;:x&#125;"</span>, <span class="keyword">self</span>.head, <span class="keyword">self</span>.tail, start, end);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">self</span>.head = start;</span><br><span class="line">    <span class="keyword">self</span>.tail = end;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">panic!</span>(<span class="string">"add_to_heap"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>从 <code>add_to_heap</code> 的输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Running bumb tests...</span><br><span class="line">Indicator: 0</span><br><span class="line">[  0.082919 0 lab_allocator::chaos:66] head, tail: 0xffffffc08026d2a0, 0xffffffc080275000</span><br><span class="line">[  0.087323 0 lab_allocator::chaos:44] head: 0xffffffc08026d2a0, tail: 0xffffffc080275000, start: 0xffffffc080275000, end: 0xffffffc08027d000</span><br><span class="line">[  0.091091 0 axruntime::lang_items:5] panicked at labs&#x2F;lab_allocator&#x2F;src&#x2F;chaos.rs:49:9:</span><br><span class="line">add_to_heap</span><br></pre></td></tr></table></figure>
+
+<p>可以看到后续追加的内存与当前程序的堆尾部是连续的，只需要更改 <code>tail</code> 字段扩容当前内存即可。</p>
+<ol>
+<li><p>初始化以及扩容</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="keyword">unsafe</span> <span class="function"><span class="keyword">fn</span> <span class="title">init</span></span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, start: <span class="built_in">usize</span>, size: <span class="built_in">usize</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.vec_reserve = (start, start + <span class="number">96</span>, start + <span class="number">96</span> + <span class="number">192</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">self</span>.start = start + <span class="number">96</span> + <span class="number">192</span> + <span class="number">384</span>;</span><br><span class="line">        <span class="keyword">self</span>.head = start + <span class="number">96</span> + <span class="number">192</span> + <span class="number">384</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">self</span>.end = start + size;</span><br><span class="line">        <span class="keyword">self</span>.tail = start + size;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">self</span>.allocated = <span class="number">96</span> + <span class="number">192</span> + <span class="number">384</span>;</span><br><span class="line">        <span class="keyword">self</span>.total = <span class="keyword">self</span>.end - <span class="keyword">self</span>.start;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">pub</span> <span class="function"><span class="keyword">fn</span> <span class="title">add_to_heap</span></span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, start: <span class="built_in">usize</span>, end: <span class="built_in">usize</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.end = end;</span><br><span class="line">        <span class="keyword">self</span>.tail = end;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">self</span>.total += end - start;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分配</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="function"><span class="keyword">fn</span> <span class="title">alloc</span></span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, layout: Layout) -&gt; <span class="built_in">Result</span>&lt;NonNull&lt;<span class="built_in">u8</span>&gt;, ()&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> vec_reserve_ptr = <span class="keyword">match</span> layout.size() &#123;</span><br><span class="line">        <span class="number">96</span> =&gt; <span class="literal">Some</span>(<span class="keyword">self</span>.vec_reserve.<span class="number">0</span> <span class="keyword">as</span> *<span class="keyword">const</span> <span class="built_in">u8</span>),</span><br><span class="line">        <span class="number">192</span> =&gt; <span class="literal">Some</span>(<span class="keyword">self</span>.vec_reserve.<span class="number">1</span> <span class="keyword">as</span> *<span class="keyword">const</span> <span class="built_in">u8</span>),</span><br><span class="line">        <span class="number">384</span> =&gt; <span class="literal">Some</span>(<span class="keyword">self</span>.vec_reserve.<span class="number">2</span> <span class="keyword">as</span> *<span class="keyword">const</span> <span class="built_in">u8</span>),</span><br><span class="line">        _ =&gt; <span class="literal">None</span>,</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> vec_reserve_ptr.is_some() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">Ok</span>(NonNull::new(vec_reserve_ptr.unwrap() <span class="keyword">as</span> *<span class="keyword">mut</span> <span class="built_in">u8</span>).unwrap());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// check if memory is overflow</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">self</span>.tail - layout.size() &lt;= <span class="keyword">self</span>.head &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">Err</span>(());</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">let</span> ptr = <span class="keyword">if</span> <span class="keyword">self</span>.is_even &#123;</span><br><span class="line">        <span class="keyword">let</span> mem = <span class="keyword">self</span>.tail - layout.size();</span><br><span class="line">        <span class="keyword">self</span>.tail = mem;</span><br><span class="line"></span><br><span class="line">        NonNull::new(mem <span class="keyword">as</span> *<span class="keyword">mut</span> <span class="built_in">u8</span>).unwrap()</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> mem = <span class="keyword">self</span>.head;</span><br><span class="line">        <span class="keyword">self</span>.head = mem + layout.size();</span><br><span class="line"></span><br><span class="line">        NonNull::new(mem <span class="keyword">as</span> *<span class="keyword">mut</span> <span class="built_in">u8</span>).unwrap()</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">self</span>.is_even = !<span class="keyword">self</span>.is_even;</span><br><span class="line">    <span class="keyword">self</span>.allocated += layout.size();</span><br><span class="line"></span><br><span class="line">    <span class="literal">Ok</span>(ptr)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>释放</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="function"><span class="keyword">fn</span> <span class="title">dealloc</span></span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, pos: NonNull&lt;<span class="built_in">u8</span>&gt;, layout: Layout) &#123;</span><br><span class="line">    <span class="keyword">if</span> (pos.as_ptr() <span class="keyword">as</span> <span class="built_in">usize</span>) &lt; <span class="keyword">self</span>.start + <span class="number">96</span> + <span class="number">192</span> + <span class="number">384</span> &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">self</span>.tail +=layout.size();</span><br><span class="line">    <span class="keyword">self</span>.allocated -= layout.size();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="越界访问"><a href="#越界访问" class="headerlink" title="越界访问"></a>越界访问</h3><p>第 32 轮分配时发生了 <code>Unhandled Supervisor Page Fault</code>，本机的 <code>panic</code> 位置为 <code>0xffffffc0802005fc</code>，远在可分配的起始地址 <code>0xffffffc08026d2a0</code> 前，猜测本次的 <code>panic</code> 发生在栈区或是发生在从 tail 进行分配或释放时发生的。</p>
+<p>说起来很好笑，<code>let mut pool = Vec::new();</code> 和 items 一样，也会占用一些堆区内存，但因为其只写不读，即使内部全部都是无效的堆内存地址也没有问题。但这提醒到了一点：在分配用于 <code>items: Vec&lt;Vec&lt;u8&gt;&gt;</code> 的堆内存时，使用了一个特判：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> vec_reserve_ptr = <span class="keyword">match</span> layout.size() &#123;</span><br><span class="line">    <span class="number">96</span> =&gt; <span class="literal">Some</span>(<span class="keyword">self</span>.vec_reserve.<span class="number">0</span> <span class="keyword">as</span> *<span class="keyword">const</span> <span class="built_in">u8</span>),</span><br><span class="line">    <span class="number">192</span> =&gt; <span class="literal">Some</span>(<span class="keyword">self</span>.vec_reserve.<span class="number">1</span> <span class="keyword">as</span> *<span class="keyword">const</span> <span class="built_in">u8</span>),</span><br><span class="line">    <span class="number">384</span> =&gt; <span class="literal">Some</span>(<span class="keyword">self</span>.vec_reserve.<span class="number">2</span> <span class="keyword">as</span> *<span class="keyword">const</span> <span class="built_in">u8</span>),</span><br><span class="line">    _ =&gt; <span class="literal">None</span>,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这几个数字并没有问题，但先前我们忽略了 <code>let a = vec![c; base+delta];</code> 的 <code>base</code> 总是从 32 开始，每次 <code>alloc</code> 翻倍，<code>delta</code> 则每轮增加 <code>1</code>。恰好， 第 32 轮的第二次 <code>alloc</code> 时那么不恰好的 <code>base = 64</code> 和 <code>delta = 32</code>，这不是 <code>96</code> 了嘛 uwu，所以到这时候，原本该分配给 <code>items: Vec&lt;Vec&lt;u8&gt;&gt;</code>  的地址被当作了 tail 堆的起始地址，又因为 <code>tail</code> 是 <code>tail = tail - size</code> 取得空闲地址，所以结果是越界了。</p>
+<p>根据观察后，在 <code>Layout</code> 中存在字段 <code>align</code>，<code>align</code> 字段在 <code>items: Vec&lt;Vec&lt;u8&gt;&gt;</code> 分配中总是 <code>8</code>，而普通分配总是 <code>1</code>。</p>
+<p>因此简单写个判断就可以解决了：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> vec_reserve_ptr.is_some() &amp;&amp; layout.align() == <span class="number">8</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">Ok</span>(NonNull::new(vec_reserve_ptr.unwrap() <span class="keyword">as</span> *<span class="keyword">mut</span> <span class="built_in">u8</span>).unwrap());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>处理完这个问题后，算法成功跑到 152 轮。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">Indicator: 152</span><br><span class="line">[ 25.511024 0 lab_allocator::chaos:71] alloc_memory: head=0xffffffc084f352a8, tail=0xffffffc085015be2, size=0xb8</span><br><span class="line">[ 25.513985 0 lab_allocator::chaos:85] alloc_memory: ptr=0xffffffc085015b2a</span><br><span class="line">[ 25.516487 0 lab_allocator::chaos:71] alloc_memory: head=0xffffffc084f352a8, tail=0xffffffc085015b2a, size=0xd8</span><br><span class="line">[ 25.519232 0 lab_allocator::chaos:85] alloc_memory: ptr=0xffffffc084f352a8</span><br><span class="line">[ 25.521127 0 lab_allocator::chaos:71] alloc_memory: head=0xffffffc084f35380, tail=0xffffffc085015b2a, size=0x118</span><br><span class="line">[ 25.523938 0 lab_allocator::chaos:85] alloc_memory: ptr=0xffffffc085015a12</span><br><span class="line">[ 25.525770 0 lab_allocator::chaos:71] alloc_memory: head=0xffffffc084f35380, tail=0xffffffc085015a12, size=0x198</span><br><span class="line">[ 25.528492 0 lab_allocator::chaos:85] alloc_memory: ptr=0xffffffc084f35380</span><br><span class="line">[ 25.530458 0 lab_allocator::chaos:71] alloc_memory: head=0xffffffc084f35518, tail=0xffffffc085015a12, size=0x298</span><br><span class="line">[ 25.533267 0 lab_allocator::chaos:85] alloc_memory: ptr=0xffffffc08501577a</span><br><span class="line">[ 25.535172 0 lab_allocator::chaos:94] head, tail: 0xffffffc084f35518, 0xffffffc08501577a</span><br><span class="line">[ 25.537270 0 lab_allocator::chaos:95] dealloc_memory: pos=0xffffffc08026f000, size=0x60</span><br><span class="line">[ 25.540115 0 lab_allocator::chaos:71] alloc_memory: head=0xffffffc084f35518, tail=0xffffffc08501577a, size=0x498</span><br><span class="line">[ 25.542925 0 lab_allocator::chaos:85] alloc_memory: ptr=0xffffffc084f35518</span><br><span class="line">[ 25.544869 0 lab_allocator::chaos:71] alloc_memory: head=0xffffffc084f359b0, tail=0xffffffc08501577a, size=0x898</span><br><span class="line">[ 25.547528 0 lab_allocator::chaos:85] alloc_memory: ptr=0xffffffc085014ee2</span><br><span class="line">[ 25.549466 0 lab_allocator::chaos:71] alloc_memory: head=0xffffffc084f359b0, tail=0xffffffc085014ee2, size=0x1098</span><br><span class="line">[ 25.552112 0 lab_allocator::chaos:85] alloc_memory: ptr=0xffffffc084f359b0</span><br><span class="line">[ 25.554013 0 lab_allocator::chaos:71] alloc_memory: head=0xffffffc084f36a48, tail=0xffffffc085014ee2, size=0x2098</span><br><span class="line">[ 25.558305 0 lab_allocator::chaos:85] alloc_memory: ptr=0xffffffc085012e4a</span><br><span class="line">[ 25.560458 0 lab_allocator::chaos:94] head, tail: 0xffffffc084f36a48, 0xffffffc085012e4a</span><br><span class="line">[ 25.562665 0 lab_allocator::chaos:95] dealloc_memory: pos=0xffffffc08026f060, size=0xc0</span><br><span class="line">[ 25.564900 0 lab_allocator::chaos:71] alloc_memory: head=0xffffffc084f36a48, tail=0xffffffc085012e4a, size=0x4098</span><br><span class="line">[ 25.567790 0 lab_allocator::chaos:85] alloc_memory: ptr=0xffffffc084f36a48</span><br><span class="line">[ 25.569725 0 lab_allocator::chaos:71] alloc_memory: head=0xffffffc084f3aae0, tail=0xffffffc085012e4a, size=0x8098</span><br><span class="line">[ 25.572420 0 lab_allocator::chaos:85] alloc_memory: ptr=0xffffffc08500adb2</span><br><span class="line">[ 25.575027 0 lab_allocator::chaos:71] alloc_memory: head=0xffffffc084f3aae0, tail=0xffffffc08500adb2, size=0x10098</span><br><span class="line">[ 25.577664 0 lab_allocator::chaos:85] alloc_memory: ptr=0xffffffc084f3aae0</span><br><span class="line">[ 25.579570 0 lab_allocator::chaos:71] alloc_memory: head=0xffffffc084f4ab78, tail=0xffffffc08500adb2, size=0x20098</span><br><span class="line">[ 25.582385 0 lab_allocator::chaos:85] alloc_memory: ptr=0xffffffc084fead1a</span><br><span class="line">[ 25.584478 0 lab_allocator::chaos:71] alloc_memory: head=0xffffffc084f4ab78, tail=0xffffffc084fead1a, size=0x40098</span><br><span class="line">[ 25.587429 0 lab_allocator::chaos:85] alloc_memory: ptr=0xffffffc084f4ab78</span><br><span class="line">[ 25.591690 0 axruntime::lang_items:5] panicked at modules/axalloc/src/lib.rs:124:31:</span><br><span class="line">Bumb: NoMemory.</span><br></pre></td></tr></table></figure>
+
+<h3 id="预分配：尽可能使用更多的内存"><a href="#预分配：尽可能使用更多的内存" class="headerlink" title="预分配：尽可能使用更多的内存"></a>预分配：尽可能使用更多的内存</h3><p>在观察 152 轮和 <code>add_memory</code> 的 <code>log</code> 时发现：</p>
+<ol>
+<li>本轮的偶数区并没有得到释放。</li>
+<li>内存从一开始分配起，每次扩容即为前一次空间 <code>x2</code>，最大为 <code>32 MB</code>。而 qemu 虚拟机分配的是 <code>128MB</code>，只分配到了 <code>32MB</code>，显然还不是极限。</li>
+</ol>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="function"><span class="keyword">fn</span> <span class="title">alloc</span></span>(&amp;<span class="keyword">mut</span> <span class="keyword">self</span>, layout: Layout) -&gt; <span class="built_in">Result</span>&lt;NonNull&lt;<span class="built_in">u8</span>&gt;, ()&gt; &#123; <span class="literal">Err</span>(()) &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Indicator: 0</span><br><span class="line">[  0.088199 0 lab_allocator::chaos:46] add_memory: start=0xffffffc080275000, end=0xffffffc08027d000 # 32768</span><br><span class="line">[  0.090785 0 lab_allocator::chaos:46] add_memory: start=0xffffffc08027d000, end=0xffffffc08028d000 # 65536</span><br><span class="line">[  0.093210 0 lab_allocator::chaos:46] add_memory: start=0xffffffc08028d000, end=0xffffffc0802ad000 # 131072</span><br><span class="line">[  0.095720 0 lab_allocator::chaos:46] add_memory: start=0xffffffc0802ad000, end=0xffffffc0802ed000 # 262144</span><br><span class="line">[  0.098368 0 lab_allocator::chaos:46] add_memory: start=0xffffffc0802ed000, end=0xffffffc08036d000 # 524288</span><br><span class="line">[  0.100928 0 lab_allocator::chaos:46] add_memory: start=0xffffffc08036d000, end=0xffffffc08046d000 # 1048576</span><br><span class="line">[  0.103497 0 lab_allocator::chaos:46] add_memory: start=0xffffffc08046d000, end=0xffffffc08066d000 # 2097152</span><br><span class="line">[  0.106127 0 lab_allocator::chaos:46] add_memory: start=0xffffffc08066d000, end=0xffffffc080a6d000 # 4194304</span><br><span class="line">[  0.108677 0 lab_allocator::chaos:46] add_memory: start=0xffffffc080a6d000, end=0xffffffc08126d000 # 8388608</span><br><span class="line">[  0.111219 0 lab_allocator::chaos:46] add_memory: start=0xffffffc08126d000, end=0xffffffc08226d000 # 16777216</span><br><span class="line">[  0.114057 0 lab_allocator::chaos:46] add_memory: start=0xffffffc08226d000, end=0xffffffc08426d000 # 33554432 byte = 32MB</span><br><span class="line">[  0.117634 0 axruntime::lang_items:5] panicked at modules/axalloc/src/lib.rs:124:31:</span><br><span class="line">Bumb: NoMemory.</span><br></pre></td></tr></table></figure>
+
+<p>因此，我们可以打第一次 alloc 开始就强迫系统预分配一大堆内存给测例。比如在 <code>pub fn alloc(&amp;mut self, layout: Layout) -&gt; Result&lt;NonNull&lt;u8&gt;, ()&gt;</code> 的合理位置添加下面的代码：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// get as much memory as possible</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">self</span>.end &lt;= <span class="number">0xffffffc08426d000</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">Err</span>(());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改后，轮数为 189。此时，内存分配量到达了 <code>64MB</code>，这样下来仍有很多剩余空间。</p>
+<h3 id="再挤一挤，内存还是有的"><a href="#再挤一挤，内存还是有的" class="headerlink" title="再挤一挤，内存还是有的"></a>再挤一挤，内存还是有的</h3><p>看一眼 <code>axalloc</code> 中：</p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> old_size = balloc.total_bytes();</span><br><span class="line"><span class="keyword">let</span> expand_size = old_size</span><br><span class="line">    .max(layout.size())</span><br><span class="line">    .next_power_of_two()</span><br><span class="line">    .max(PAGE_SIZE);</span><br><span class="line"><span class="keyword">let</span> heap_ptr = <span class="keyword">match</span> <span class="keyword">self</span>.alloc_pages(expand_size / PAGE_SIZE, PAGE_SIZE) &#123;</span><br><span class="line">    <span class="literal">Ok</span>(ptr) =&gt; ptr,</span><br><span class="line">    <span class="literal">Err</span>(e) =&gt; <span class="built_in">panic!</span>(<span class="string">"Bumb: &#123;:?&#125;."</span>, e),</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>不难发现 <code>axalloc</code> 是依赖于 <code>total_bytes()</code> 来判断该扩容多少内存。</p>
+<p>简单一些处理，只需要修改原先的 <code>total_bytes</code> 代码，使得 <code>total_bytes</code> 永远返回 <code>0</code>。 </p>
+<figure class="highlight rust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pub</span> <span class="function"><span class="keyword">fn</span> <span class="title">total_bytes</span></span>(&amp;<span class="keyword">self</span>) -&gt; <span class="built_in">usize</span> &#123;</span><br><span class="line">    <span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改后的最终轮数为 245。</p>
+<blockquote>
+<p>也许还会在 <a href="https://blog.hanbings.io" target="_blank" rel="noopener">我的博客</a> 更新，代码仓库可能会在后续删除，为了不再占用的过多空间，完整代码同样也附带在我的博客里</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/12/03/2024%E5%B9%B4%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E4%B8%89%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-guoraymon/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/12/03/2024%E5%B9%B4%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E4%B8%89%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-guoraymon/" class="post-title-link" itemprop="url">2024年秋冬季开源操作系统训练营三阶段总结报告-guoraymon</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-12-03 23:39:18" itemprop="dateCreated datePublished" datetime="2024-12-03T23:39:18+00:00">2024-12-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-05-24 07:18:17" itemprop="dateModified" datetime="2025-05-24T07:18:17+00:00">2025-05-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/2024%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5/" itemprop="url" rel="index"><span itemprop="name">2024秋冬季开源操作系统训练营</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="Unikernel-模式内核特点"><a href="#Unikernel-模式内核特点" class="headerlink" title="Unikernel 模式内核特点"></a>Unikernel 模式内核特点</h3><p>应用与内核处于同一特权级，共享同一内存空间，编译形成一个 image 即是应用又是内核。<br>无隔离无切换，简单高效但安全性低。</p>
+<h2 id="U-1-0-Hello"><a href="#U-1-0-Hello" class="headerlink" title="U.1.0 Hello"></a>U.1.0 Hello</h2><p>输出信息到屏幕。</p>
+<h3 id="引导过程：axhal"><a href="#引导过程：axhal" class="headerlink" title="引导过程：axhal"></a>引导过程：axhal</h3><ul>
+<li>暂存来自 openSBI 的两个参数<ul>
+<li>a0: hartid，当前 CPU 的 ID</li>
+<li>a1: DTB 指针，设备树地址</li>
+</ul>
+</li>
+<li>设置栈<ul>
+<li><code>la sp, {boot_stack}</code><ul>
+<li>将预设的栈地址加载到sp。</li>
+</ul>
+</li>
+<li><code>li t0, {boot_stack_size}</code><ul>
+<li>将预设的栈大小加载到t0。</li>
+</ul>
+</li>
+<li><code>add sp, sp, t0</code><ul>
+<li>将 <code>sp</code> 和 <code>t0</code> 的值相加并存回 <code>sp</code>，相当于栈指针下移 <code>t0</code>，为栈留出 <code>t0</code> 内存空间，完成栈的设置。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>设置页表并开启 MMU</li>
+<li>修正虚拟高地址<ul>
+<li>由于开启 MMU 导致地址空间切换，需要将 <code>sp</code> 加上虚拟高地址的偏移量。</li>
+</ul>
+</li>
+<li>调用 rust_entry<ul>
+<li><code>mv a0, s0, mv a1, s1</code><ul>
+<li>将 <code>hartid</code> 和 <code>DTB指针</code> 复制到寄存器 <code>a0</code> 和 <code>a1</code>。</li>
+</ul>
+</li>
+<li><code>la a2, {entry}</code><ul>
+<li>将入口地址加载到a2寄存器。</li>
+</ul>
+</li>
+<li><code>add a2, a2, s2</code><ul>
+<li>将 <code>a2</code> 寄存器加上虚拟高地址的偏移。</li>
+</ul>
+</li>
+<li><code>jalr a2</code><ul>
+<li>跳转到 <code>a2</code> 地址，即执行 <code>rust_entry</code> 函数</li>
+</ul>
+</li>
+<li><code>j .</code><ul>
+<li>无条件跳转到当前地址</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="引导过程：axruntime"><a href="#引导过程：axruntime" class="headerlink" title="引导过程：axruntime"></a>引导过程：axruntime</h3><ul>
+<li>打印 LOGO 和基本信息</li>
+<li>初始化日志功能</li>
+<li>日志打印物理内存地址信息</li>
+<li>#[cfg(feature = “xxx”)]<ul>
+<li>按需执行各组件初始化，例如 <code>alloc</code> 组件需要初始化内存分配器。</li>
+</ul>
+</li>
+<li>打印 CPU 信息，原子操作使已初始化 CPU 数量加一，等待所有 CPU 初始化</li>
+<li>进入 <code>main</code> 函数</li>
+</ul>
+<h3 id="运行过程：app-hello-world"><a href="#运行过程：app-hello-world" class="headerlink" title="运行过程：app:hello_world"></a>运行过程：app:hello_world</h3><ul>
+<li>没有 std 支持，不提供 main 入口</li>
+<li>axstd::println -&gt; axstd::io::__print_impl -&gt; axstd::io::Stdout::Write -&gt; arceos_api::stdio::ax_console_write_bytes -&gt; axhal::console::write_bytes -&gt; riscv64_qemu_virt::putchar</li>
+</ul>
+<h2 id="U-2-0-Collections"><a href="#U-2-0-Collections" class="headerlink" title="U.2.0 Collections"></a>U.2.0 Collections</h2><p>组件：axalloc<br>目标：</p>
+<ol>
+<li>动态内存分配，支持 Vec 集合类型。</li>
+<li>动态内存分配框架和算法。</li>
+</ol>
+<p>需要实现两类分配：</p>
+<ul>
+<li>Bytes Alloc<ul>
+<li>支持：Rust Vec, String…</li>
+<li>接口：#[global_allocator] Trait</li>
+<li>框架：axalloc::byteAllocator</li>
+<li>算法：allocator::TlsfByteAllocator, BuddyByteAllocator, SlabByteAllocator</li>
+</ul>
+</li>
+<li>Pages Alloc<ul>
+<li>支持：驱动，页表自身</li>
+<li>接口：global_allocator() 全局函数</li>
+<li>框架：axalloc::pageAllocator</li>
+<li>算法：allocator::BitmapAllocator</li>
+</ul>
+</li>
+</ul>
+<h3 id="GlobalAllocator-数据结构"><a href="#GlobalAllocator-数据结构" class="headerlink" title="GlobalAllocator 数据结构"></a>GlobalAllocator 数据结构</h3><p>使用 <code>TlsfByteAllocator</code> 作为字节分配器，<code>BitmapPageAllocator</code> 作为页分配器。</p>
+<h3 id="GlobalAllocator-接口"><a href="#GlobalAllocator-接口" class="headerlink" title="GlobalAllocator 接口"></a>GlobalAllocator 接口</h3><p>实现 #[global_allocator] Trait 和 global_allocator() 全局函数。</p>
+<h3 id="GlobalAllocator-框架"><a href="#GlobalAllocator-框架" class="headerlink" title="GlobalAllocator 框架"></a>GlobalAllocator 框架</h3><p>将字节分配器和页分配器组成一个简单的两级分配器。首先将全部内存区域分配给页分配器，然后分配一块小区域（32 KB）给字节分配器。当字节分配器分配时无可用内存时，会向页分配器请求追加内存。</p>
+<h2 id="U-3-0-ReadPFlash"><a href="#U-3-0-ReadPFlash" class="headerlink" title="U.3.0 ReadPFlash"></a>U.3.0 ReadPFlash</h2><p>组件：pagetable<br>目标：</p>
+<ol>
+<li>引入页表组件，通过地址空间重映射，支持设备 MMIO。</li>
+<li>地址空间概念，重映射意义，页表机制。</li>
+</ol>
+<p>ArceOS 包括两阶段地址空间映射，Boot 阶段默认开启 1G 空间的恒等映射。如果需要支持 MMIO，需要指定 paging feature 实现重映射更大的空间。</p>
+<h3 id="PFlash"><a href="#PFlash" class="headerlink" title="PFlash"></a>PFlash</h3><p>Qemu 的 PFlash 模拟闪存磁盘，启动时自动加载到固定的 MMIO 区域，读操作不需要驱动。Qemu 保留了 0 号 pflash 作为扩展固件使用， 1 号 pflash 提供给用户使用，地址是 0x2200_0000。</p>
+<h3 id="物理地址空间"><a href="#物理地址空间" class="headerlink" title="物理地址空间"></a>物理地址空间</h3><ul>
+<li>0x8020_0000：kernel Image<ul>
+<li>.bss</li>
+<li>.data</li>
+<li>.rodata</li>
+<li>.text</li>
+</ul>
+</li>
+<li>0x8000_0000：SBI</li>
+<li>0x0C00_0000: MMIO</li>
+</ul>
+<h3 id="分页阶段-1-早期启用"><a href="#分页阶段-1-早期启用" class="headerlink" title="分页阶段 1 - 早期启用"></a>分页阶段 1 - 早期启用</h3><p>开启分页，恒等映射 0x8000_0000 到 0xC000_0000 的 1GB 地址空间。切换前后地址范围不变，但从物理空间切换到虚拟空间。</p>
+<h3 id="分页阶段2-重建映射"><a href="#分页阶段2-重建映射" class="headerlink" title="分页阶段2 - 重建映射"></a>分页阶段2 - 重建映射</h3><p>新建一个空的内核地址空间，并通过页表申请一个新的页，随后通过axhal 体系无关操作将根页表地址写入到 satp 寄存器。</p>
+<h2 id="U-4-0-ChildTask"><a href="#U-4-0-ChildTask" class="headerlink" title="U.4.0 ChildTask"></a>U.4.0 ChildTask</h2><p>组件：axtask<br>目标：</p>
+<ol>
+<li>创建子任务，建立多任务基本框架。</li>
+<li>任务、运行队列。</li>
+</ol>
+<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><ul>
+<li>entry：任务逻辑入口</li>
+<li>state：任务状态</li>
+<li>kstack：栈空间，ArceOS 任务相当于线程。</li>
+<li>ctx：任务调度上下文</li>
+<li>task_ext：扩展属性，用于宏内核和 Hypervisor 扩展。</li>
+</ul>
+<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><h4 id="spawn-amp-spawn-raw"><a href="#spawn-amp-spawn-raw" class="headerlink" title="spawn &amp;  spawn_raw"></a>spawn &amp;  spawn_raw</h4><p>生成一个新任务，加入 RUN_QUEUE。</p>
+<h4 id="yield-now"><a href="#yield-now" class="headerlink" title="yield_now"></a>yield_now</h4><p>让出 CPU 控制权，切换到另一个已就绪任务。</p>
+<h4 id="sleep-amp-sleep-until"><a href="#sleep-amp-sleep-until" class="headerlink" title="sleep &amp; sleep_until"></a>sleep &amp; sleep_until</h4><p>睡眠指定时间。</p>
+<h4 id="exit"><a href="#exit" class="headerlink" title="exit"></a>exit</h4><p>退出任务。</p>
+<h3 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h3><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><p>运行队列初始化和定时器初始化。<br>初始两个任务，main是主线程任务，idle 是用于所有任务阻塞时执行的任务。</p>
+<h2 id="U-5-0-MsgQueue"><a href="#U-5-0-MsgQueue" class="headerlink" title="U.5.0 MsgQueue"></a>U.5.0 MsgQueue</h2><p>组件：axsync<br>目标：</p>
+<ol>
+<li>任务切换机制，协作式调度算法。</li>
+<li>同步的方式，Mutex 的机制。</li>
+</ol>
+<h3 id="任务切换原理"><a href="#任务切换原理" class="headerlink" title="任务切换原理"></a>任务切换原理</h3><p>保存当前任务上下文-&gt;切换-&gt;恢复下个任务上下文。上下文一般包含如下寄存器：</p>
+<ul>
+<li>ra：函数返回地址寄存器。</li>
+<li>sp：栈指针寄存器。</li>
+<li>s0-s11：函数调用相关寄存器。</li>
+</ul>
+<h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><p>协作式调度算法 FIFO<br>较简单，略。</p>
+<h3 id="同步原语"><a href="#同步原语" class="headerlink" title="同步原语"></a>同步原语</h3><h4 id="自旋锁"><a href="#自旋锁" class="headerlink" title="自旋锁"></a>自旋锁</h4><p>单 CPU 只需关中断+关抢占。多 CPU 需要相互可见内存变量进行原子互斥操作。</p>
+<h4 id="互斥锁"><a href="#互斥锁" class="headerlink" title="互斥锁"></a>互斥锁</h4><p>自旋锁+等待队列</p>
+<h3 id="内存分配算法"><a href="#内存分配算法" class="headerlink" title="内存分配算法"></a>内存分配算法</h3><p>TLSF，Buddy，Slab 算法。较复杂，可单独了解，略 。</p>
+<h3 id="U-6-0-FairSched"><a href="#U-6-0-FairSched" class="headerlink" title="U.6.0 FairSched"></a>U.6.0 FairSched</h3><p>组件：timer<br>目标：</p>
+<ol>
+<li>抢占式调度，CFS 调度策略</li>
+<li>时钟中断机制</li>
+</ol>
+<h3 id="抢占时机"><a href="#抢占时机" class="headerlink" title="抢占时机"></a>抢占时机</h3><ol>
+<li>内部条件：时间片耗尽</li>
+<li>外部条件：启用抢占<br>内外条件都满足时，才发生抢占。</li>
+</ol>
+<h3 id="抢占式调度算法-ROUND-ROBIN"><a href="#抢占式调度算法-ROUND-ROBIN" class="headerlink" title="抢占式调度算法 ROUND_ROBIN"></a>抢占式调度算法 ROUND_ROBIN</h3><p>定时器递减当前任务的时间片，耗尽时允许调度。</p>
+<h3 id="抢占式调度算法-CFS"><a href="#抢占式调度算法-CFS" class="headerlink" title="抢占式调度算法 CFS"></a>抢占式调度算法 CFS</h3><p>vruntime= init_vruntime + (delta / weight(nice))。</p>
+<p>vruntime 最小的任务就是优先权最高的任务，即当前任务。</p>
+<p>新任务 vruntime = min_runtime，设置优先级即设置 nice 值。</p>
+<p>队列基于 BTreeMap，排序基于 vruntime，队首是 vruntime 最小的任务。</p>
+<h2 id="U-7-0-ReadBlock"><a href="#U-7-0-ReadBlock" class="headerlink" title="U.7.0 ReadBlock"></a>U.7.0 ReadBlock</h2><p>组件：axdriver、drv_block、drv_virtio<br>目标：</p>
+<ol>
+<li>从磁盘块设备读数据，替换 PFlash</li>
+<li>发现设备关联驱动、块设备、VirtIO 设备</li>
+</ol>
+<p>axruntime::rust_main -&gt; axdriver::init_drivers -&gt; AllDevices::probe -&gt; probe_bus_devices</p>
+<p>axruntime 在启动后期，调用 axdriver。axdriver 负责发现设备和初始化，核心结构是 AllDevices。probe 基于总线发现设备，逐个匹配驱动并初始化。</p>
+<p>按照平台有两种总线：</p>
+<ol>
+<li>PCI 总线，基于 PCI 总线协议。</li>
+<li>MMIO 总线，一般基于 FDT 解析，目前采用两级循环探测。</li>
+</ol>
+<p>Virtio 驱动和 virtio 设备交互：</p>
+<ol>
+<li>Vring 环形队列，本质上是连续 page 页面。</li>
+<li>中断响应通道，主要用于等待读取大块数据。</li>
+</ol>
+<h2 id="U-8-0-LoadApp"><a href="#U-8-0-LoadApp" class="headerlink" title="U.8.0 LoadApp"></a>U.8.0 LoadApp</h2><p>组件：fatfs、axfs_vfs<br>目标：</p>
+<ol>
+<li>从文件系统加载应用和数据</li>
+<li>文件系统初始化和文件操作</li>
+</ol>
+<p>文件系统 mount 的意义：把易于存储的扁平化结构目录树转为易于搜索遍历的立体化形态目录树。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2024/12/03/2024%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93-lm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2024/12/03/2024%E7%A7%8B%E5%86%AC%E5%AD%A3%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93-lm/" class="post-title-link" itemprop="url">2024秋冬季开源操作系统训练营第三阶段总结-lm</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2024-12-03 08:53:27" itemprop="dateCreated datePublished" datetime="2024-12-03T08:53:27+00:00">2024-12-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-05-24 07:18:17" itemprop="dateModified" datetime="2025-05-24T07:18:17+00:00">2025-05-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>本阶段忙于处理于学校的事情没有完全跟课。主要学习了Hypervisor虚拟化的内容，这也是我最感兴趣的部分。<br>通过实验学习，我了解到Hypervisor是如何模拟出多个虚拟机环境，让它们各自拥有独立的操作系统和硬件资，期望在后续的学习中对虚拟化技术有更深入的了解。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/blog/page/13/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/blog/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/70/">70</a><a class="extend next" rel="next" href="/blog/page/15/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+        </div>
+        
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rcore-os Group</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/muse.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
